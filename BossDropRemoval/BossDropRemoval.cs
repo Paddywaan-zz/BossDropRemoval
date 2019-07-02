@@ -1,18 +1,7 @@
-﻿using RoR2;
-using BepInEx;
-using System.Reflection;
-using R2API;
+﻿using BepInEx;
 using UnityEngine;
 using System.Collections.Generic;
-using System;
 using BepInEx.Configuration;
-using System.Reflection;
-using MonoMod.Cil;
-using KinematicCharacterController;
-using System.Linq;
-//using EntityStates;
-
-
 
 namespace Paddywan
 {
