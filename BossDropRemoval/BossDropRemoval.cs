@@ -7,7 +7,7 @@ namespace Paddywan
 {
     [BepInDependency("com.bepis.r2api")]
 
-    [BepInPlugin("com.Paddywan.BossDropRemoval", "BossDropRemoval", "1.0.1")]
+    [BepInPlugin("com.Paddywan.BossDropRemoval", "BossDropRemoval", "1.0.2")]
 
     public class BossDropRemoval : BaseUnityPlugin
     {
@@ -43,14 +43,14 @@ namespace Paddywan
 
             On.RoR2.BossGroup.OnMemberDeathServer += (orig, self, memberMaster, damageReport) =>
             {
-                Debug.Log(damageReport.victimBody.name);
-                self.bossDropChance = 1.0f;
+                //Debug.Log(damageReport.victimBody.name);
+                self.bossDropChance = 0.15f;
                 foreach (string s in disallowedBossDrops)
                 {
                     if (damageReport.victimBody.name == s)
                     {
                         self.bossDropChance = 0f;
-                        Debug.Log("Bossdrop is removed.");
+                        //Debug.Log("Bossdrop is removed.");
                     }
                 }
                 orig(self, memberMaster, damageReport);
