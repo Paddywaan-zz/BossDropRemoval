@@ -40,7 +40,7 @@ namespace Paddywan
                 false
                 );
             if(groveDisabled.Value) disallowedBossDrops.Add("GraveKeeperBody(Clone)");
-
+            RoR2.Run.instance.difficultyCoefficient = 0;
             On.RoR2.BossGroup.OnMemberDeathServer += (orig, self, memberMaster, damageReport) =>
             {
                 //Debug.Log(damageReport.victimBody.name);
